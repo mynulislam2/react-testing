@@ -9,8 +9,9 @@ const newColor=color=="red"?"blue":"red"
 
   return (
     <div className="App">
-<button style={{backgroundColor:color}} disabled={Check} onClick={()=>setColor(newColor)}>Change to {newColor}</button>
-<input type="checkbox" onClick={()=>setCheck(!Check)} name="" value=""/>
+<button style={{backgroundColor:Check?"gray":color}} disabled={Check} onClick={()=>setColor(newColor)}>Change to {newColor}</button>
+<input type="checkbox" onClick={()=>setCheck(!Check)} name="" id="disable checkbox"/>
+<label htmlFor='disable checkbox'>disable checkbox</label>
     </div>
   );
 }
